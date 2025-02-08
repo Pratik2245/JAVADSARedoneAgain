@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="95d07958-fabc-4902-995c-1c19c7abe215" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2lqQIRTbI9mV6TLPliCcyGX7UrB" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.EnhancedFirewallClient.executor": "Run",
+    "Application.EnhancedFirewallServer.executor": "Run",
+    "Application.FCFS.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.Recurrsion_1_PrintMethod.executor": "Debug",
+    "Application.Recursion_1_MergeSort.executor": "Run",
+    "Application.Recursion_27_1to5.executor": "Debug",
+    "Application.Recursion_27_2FactorialOfNumber.executor": "Debug",
+    "Application.Recursion_27_3SumOfNumber.executor": "Run",
+    "Application.Recursion_27_4SumOfDigit.executor": "Run",
+    "Application.Recursion_27_5ConceptofPostAndPreIncrement.executor": "Run",
+    "Application.Recursion_27_6ReverseANumber.executor": "Run",
+    "Application.Recursion_3_BinarySearchUsingRecursion.executor": "Debug",
+    "Application.Triangle.executor": "Run",
+    "Application.binarySearchUsingRecursion.executor": "Run",
+    "Application.fibo.executor": "Debug",
+    "Application.fibonacciSeries.executor": "Debug",
+    "Application.messageFunction.executor": "Debug",
+    "Application.selectionSortUsingRecurrsion.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/JAVADSA/Recurrsion_1",
+    "onboarding.tips.debug.path": "D:/JAVADSA/Recurrsion/src/Main.java",
+    "settings.editor.selected.configurable": "project.propDebugger"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="95d07958-fabc-4902-995c-1c19c7abe215" name="Changes" comment="" />
+      <created>1725905047159</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1725905047159</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/fibo.java</url>
+          <line>1</line>
+          <properties class="fibo">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/messageFunction.java</url>
+          <line>2</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/fibonacciSeries.java</url>
+          <line>7</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Recurrsion_1_PrintMethod.java</url>
+          <line>4</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Recursion_27_1to5.java</url>
+          <line>2</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Recursion_27_2FactorialOfNumber.java</url>
+          <line>2</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Recursion_3_BinarySearchUsingRecursion.java</url>
+          <line>3</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

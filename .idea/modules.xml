@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/01_LinearSearch/01_LinearSearch.iml" filepath="$PROJECT_DIR$/01_LinearSearch/01_LinearSearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02_BinarySearch/02_BinarySearch.iml" filepath="$PROJECT_DIR$/02_BinarySearch/02_BinarySearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/JAVADSA.iml" filepath="$PROJECT_DIR$/.idea/JAVADSA.iml" />
+    </modules>
+  </component>
+</project>
