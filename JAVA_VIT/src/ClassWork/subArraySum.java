@@ -5,8 +5,8 @@ import java.util.List;
 
 public class subArraySum {
     public static void main(String[] args) {
-        int arr[]={5, 3, 4};
-        int target=2;
+        int arr[]={-1, -2, -3, -4};
+        int target=-5;
        List<Integer> l= findSubArray(arr,target);
         System.out.println(l);
     }
@@ -21,13 +21,13 @@ public class subArraySum {
             sum = 0;
             for (int j = i; j < arr.length; j++) {
                 sum += arr[j];
+//                printing the sum after every pass /
+//                System.out.println("Checking subarray: " + (i+1) + " to " + (j+1) + " with sum: " + sum);
                 if (sum == target) {
                     endInd = j + 1;
-
                     list.add(startInd);
                     list.add(endInd);
                     return list;
-
                 }
             }
 

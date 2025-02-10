@@ -5,15 +5,15 @@ import java.util.Arrays;
 
 public class MissingElementInArray {
     public static void main(String[] args) {
-        int arr[]={1,2,3,5};
+        int arr[]={1,1,2,2,3,4};
        int ans= MissingElement(arr);
         System.out.println(ans);
     }
     public static int MissingElement(int arr[]){
         int i=0;
         while (i<arr.length){
-            int index=arr[i];
-            if(arr[i]!=arr[index]){
+            int index=arr[i]-1;
+            if(arr[i]>0 && arr[i]<arr.length && arr[i]!=arr[index]){
                 int temp=arr[i];
                 arr[i]=arr[index];
                 arr[index]=temp;
@@ -21,9 +21,11 @@ public class MissingElementInArray {
                 i++;
             }
         }
-        for (int k : arr) {
-            System.out.println(k);
+        for (int j=0;j<arr.length;j++) {
+            if(j+1!=arr[j]){
+                return j+1;
+            }
         }
-        return -1;
+        return arr.length+1;
     }
 }
