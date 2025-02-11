@@ -3,10 +3,10 @@ package Assignments;
 public class Assignment1 {
     public static void main(String[] args) {
         Participants p1 = new Participants("Rohit", 1234567889L, "Computer");
-        System.out.println("Hi "+p1.getName()+" Your RegistrationId is="+p1.getRegistrationId());
+        System.out.println("Hi "+p1.getName()+"! Your RegistrationId is "+p1.getRegistrationId());
 
         Participants p2 = new Participants("Sayali", 1988612300L, "Mechanical");
-        System.out.println("Hi "+p2.getName()+" Your RegistrationId is="+p2.getRegistrationId());
+        System.out.println("Hi "+p2.getName()+"! Your RegistrationId is "+p2.getRegistrationId());
     }
 }
 class Participants{
