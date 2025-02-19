@@ -8,12 +8,14 @@ public class Manager extends Employee {
         this.bonusPercentage = bonusPercentage;
     }
 
-    // Calculate bonus based on basic salary (for full month)
+    Manager(){
+        bonusPercentage=0.0;
+        System.out.println("Data Initialised Successfully");
+    }
     public double calculateBonus() {
-        return (bonusPercentage / 100) * basicSalary;
+        return(bonusPercentage / 100) * basicSalary;
     }
 
-    // Override calculateNetSalary to include bonus before tax calculation
     @Override
     public double calculateNetSalary() {
         double grossSalary = calculateGrossSalary();
@@ -28,7 +30,6 @@ public class Manager extends Employee {
         System.out.println("Bonus Percentage: " + bonusPercentage + "%");
     }
 
-    // Calculate net salary for a team member when applying the manager's bonus
     public double calculateTeamMemberNetSalary(Employee teamMember) {
         double memberGross = teamMember.calculateGrossSalary();
         double bonus = (bonusPercentage / 100) * teamMember.basicSalary;

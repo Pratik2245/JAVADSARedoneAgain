@@ -9,8 +9,18 @@ public class Employee {
     protected String managerName;
     protected double basicSalary;
     // Assuming full month working days is 30
-    protected final int totalWorkingDays = 30;
+    protected final int totalWorkingDays=30;
 
+    Employee(){
+        empName="";
+        empId="";
+        position="";
+        daysPresent=0;
+        teamName="";
+        managerName="";
+        basicSalary=0.0;
+        System.out.println("Data Initialised Successfully");
+    }
     public Employee(String empName, String empId, String position, int daysPresent, String teamName, String managerName, double basicSalary) {
         this.empName = empName;
         this.empId = empId;
@@ -21,16 +31,12 @@ public class Employee {
         this.basicSalary = basicSalary;
     }
 
-    // Calculate allowances based on the basic salary (for full month)
     public double calculateAllowances() {
-        double HRA = 0.25 * basicSalary;
-        double DA = 0.15 * basicSalary;
-        double TA = 0.10 * basicSalary;
+        double HRA= 0.25 * basicSalary;
+        double DA= 0.15 * basicSalary;
+        double TA= 0.10 * basicSalary;
         return HRA + DA + TA;
     }
-
-    // Calculate the gross salary for the full month,
-    // then adjust it according to attendance (daysPresent/totalWorkingDays)
     public double calculateGrossSalary() {
         double fullGross = basicSalary + calculateAllowances();
         double attendanceFactor = (double) daysPresent / totalWorkingDays;
@@ -54,7 +60,6 @@ public class Employee {
         return tax;
     }
 
-    // Calculate the net salary after deducting tax (based on prorated gross salary)
     public double calculateNetSalary() {
         double grossSalary = calculateGrossSalary();
         double tax = calculateTax(grossSalary);
