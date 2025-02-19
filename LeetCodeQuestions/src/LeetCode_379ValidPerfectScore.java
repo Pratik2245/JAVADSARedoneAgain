@@ -1,6 +1,6 @@
 public class LeetCode_379ValidPerfectScore {
     public static void main(String[] args) {
-        int num=16;
+        int num=808201;
         boolean ans=ValidPerfectSquare(num);
         System.out.println(ans);
     }
