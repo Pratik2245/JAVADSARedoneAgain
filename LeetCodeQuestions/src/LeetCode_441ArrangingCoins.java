@@ -15,6 +15,7 @@ public class LeetCode_441ArrangingCoins {
 //        }
 //        System.out.println(ans);
 //        another solution
+
         int res=0;
         int start=1,end=n;
         while (start<=end){
