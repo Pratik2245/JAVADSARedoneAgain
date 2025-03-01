@@ -1,6 +1,7 @@
 public class LeetCode_1854 {
     public static void main(String[] args) {
-
+    int arr[][]={{1993,1999},{2000,2010}};
+    maximumPopulation(arr);
     }
     public static int maximumPopulation(int[][] logs) {
     int[] popChange = new int[101]; // Covers years 1950 to 2050
