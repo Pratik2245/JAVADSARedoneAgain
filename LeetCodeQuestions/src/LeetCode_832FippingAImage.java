@@ -3,12 +3,8 @@ import java.util.Arrays;
 public class LeetCode_832FippingAImage {
     public static void main(String[] args) {
         int arr[][]={{1,1,0},{1,0,1},{0,0,0}};
-        int arr2[][]=flipAndInvertImage(arr);
-        for (int i = 0; i <arr2.length; i++) {
-            for (int j = 0; j <arr2[0].length ; j++) {
-                System.out.println(arr2[i][j]);
-            }
-        }
+        int arr3[][]=flipAndInvertImage(arr);
+        printArray(arr3);
     }
     public static int[][] flipAndInvertImage(int[][] image) {
         int n=image.length;
@@ -22,12 +18,14 @@ public class LeetCode_832FippingAImage {
                right--;
            }
         }
-        for (int i = 0; i <image.length ; i++) {
-            for (int j = 0; j < image[0].length ; j++) {
-                System.out.print(image[i][j]);
+        return image;
+    }
+    public static void printArray(int arr[][]){
+        for (int i = 0; i <arr.length ; i++) {
+            for (int j = 0; j <arr[0].length ; j++) {
+                System.out.print(arr[i][j]);
             }
             System.out.println();
         }
-        return image;
     }
 }
