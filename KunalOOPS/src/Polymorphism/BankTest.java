@@ -1,12 +1,12 @@
 package Polymorphism;
 
 class Bank{
-    double getInterestRate(){
+     double getInterestRate(){
         return 5.0;
     }
 }
 class HDFC extends  Bank{
-    double getInterestRate(){
+      double getInterestRate(){
         return  super.getInterestRate()+1.5;
     }
 }
