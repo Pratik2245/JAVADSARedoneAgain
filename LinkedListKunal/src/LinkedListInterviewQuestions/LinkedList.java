@@ -43,9 +43,45 @@ public class LinkedList {
     void displayLinkedList(){
         Node temp=head;
         while (temp!=null){
-            System.out.println(temp.data);
+            System.out.print(temp.data+"->");
             temp=temp.next;
         }
+        System.out.println("NULL");
+    }
+
+    public boolean checkLinkedListPalindrome(){
+       Node temp= findMid(head);
+//       reverse the linked list from mid
+        Node prev=null;
+        Node current=temp;
+        Node nextPtr;
+        while (current!=null){
+            nextPtr=current.next;
+            current.next=prev;
+            prev=current;
+            current=nextPtr;
+        }
+        Node right=prev;//right side head
+        Node left=head;
+//        now iterate through the linked list
+        while (right!=null){
+            if(left.data!=right.data){
+                return false;
+            }
+            left=left.next;
+            right=right.next;
+        }
+        return  true;
+    }
+
+    public Node findMid(Node head){
+     Node slow=head;
+     Node fast=head;
+     while (fast!=null && fast.next!=null){
+         slow=slow.next;
+         fast=fast.next.next;
+     }
+     return  slow;
     }
 //    public boolean hasCycle(ListNode head) {
 //        ListNode fast=head;
