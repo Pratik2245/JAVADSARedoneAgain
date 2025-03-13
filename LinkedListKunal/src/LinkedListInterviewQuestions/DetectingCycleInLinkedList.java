@@ -17,7 +17,7 @@ public class DetectingCycleInLinkedList {
         third.next = fourth;
 
         // Creating a cycle: 4 -> 2 (cycle starts at node with value 2)
-        fourth.next = null;
+        fourth.next = second;
 
         return head; // Returning the head of the cycle list
     }
@@ -33,10 +33,42 @@ public class DetectingCycleInLinkedList {
      }
      return false;
     }
+
+    public static void removingCycle(ListNode head){
+        ListNode slow=head;
+        ListNode fast=head;
+        while (fast!=null && fast.next!=null){
+            slow=slow.next;
+            fast=fast.next.next;
+            if(slow==fast){
+                break;
+            }
+        }
+        if (fast == null || fast.next == null) {
+            return;
+        }
+        slow=head;
+        while (fast.next!=slow.next){
+            slow=slow.next;
+            fast=fast.next;
+        }
+        fast.next=null;
+    }
+    public static void displayLinkedList(ListNode head) {
+        ListNode temp = head;
+        while (temp != null) {
+            System.out.print(temp.val + " -> ");
+            temp = temp.next;
+        }
+        System.out.println("NULL");
+    }
+
     public static void main(String[] args) {
      ListNode head=createCycleList();
      boolean ans=detectCycle(head);
      System.out.println(ans);
+     removingCycle(head);
+     displayLinkedList(head);
     }
 
 }
