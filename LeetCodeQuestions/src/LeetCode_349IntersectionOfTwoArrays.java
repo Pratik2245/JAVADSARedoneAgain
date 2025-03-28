@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -5,7 +6,8 @@ public class LeetCode_349IntersectionOfTwoArrays {
     public static void main(String[] args) {
       int arr1[]={1,2,2,3};
       int arr2[]={2,3};
-      intersection(arr1,arr2);
+      int arr[]=intersection(arr1,arr2);
+        System.out.println(Arrays.toString(arr));
     }
     public static int[] intersection(int[] nums1, int[] nums2) {
         Set<Integer> set1 = new HashSet<>();
