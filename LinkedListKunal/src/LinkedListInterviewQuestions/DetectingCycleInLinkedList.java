@@ -5,11 +5,16 @@ import com.sun.security.jgss.GSSUtil;
 import java.util.List;
 
 public class DetectingCycleInLinkedList {
+    public static ListNode tail;
+    public static ListNode head;
     public static ListNode createCycleList() {
-        ListNode head = new ListNode(1);
-        ListNode second = new ListNode(2);
+
+        head = new ListNode(5);
+        ListNode second = new ListNode(4);
         ListNode third = new ListNode(3);
-        ListNode fourth = new ListNode(4);
+        ListNode fourth = new ListNode(2);
+        ListNode fifth = new ListNode(1);
+        tail=fifth;
 //        ListNode fifth=new ListNode(5);
 //        ListNode sixth=new ListNode(6);
 //        ListNode seventh=new ListNode(7);
@@ -19,7 +24,8 @@ public class DetectingCycleInLinkedList {
         head.next = second;
         second.next = third;
         third.next = fourth;
-        fourth.next=second;
+        fourth.next=fifth;
+        fifth.next=null;
 //        fifth.next=sixth;
 //        sixth.next=seventh;
 //        seventh.next=eighth;
@@ -111,17 +117,32 @@ public class DetectingCycleInLinkedList {
             }
         }
     }
+//    using recursion reversing the linked list
+    public static void reverseLinkedLIst(ListNode node){
+        if(node==tail){
+            head=tail;
+            return;
+        }
+        reverseLinkedLIst(node.next);
+        tail.next=node;
+        tail=node;
+        tail.next=null;
+   
+    }
     public static void main(String[] args) {
      ListNode head=createCycleList();
 //     boolean ans=detectCycle(head);
 //     System.out.println(ans);
 //     removingCycle(head);
-//     displayLinkedList(head);
+     displayLinkedList(head);
 //        detect the length of the cycle
 //        int ans=calculateTheLengthOfCycle(head);
 //        System.out.println(ans);
 //        now calculate the startig point of the cycle
-        startingPointCycle(head);
+//        startingPointCycle(head);
+        reverseLinkedLIst(head);
+        displayLinkedList(head);
+
     }
 
 }
