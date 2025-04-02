@@ -3,7 +3,7 @@ public class LeetCode_1108DefagingAnIpAddress {
         String s= "1.1.1.1";
        String str= defangIPaddr(s);
         System.out.println(str);
-        System.out.println("done");
+        System.out.println("done successfully");
 //        Output: "1[.]1[.]1[.]1"
     }
     public static String defangIPaddr(String address) {
