@@ -9,12 +9,12 @@ public class DetectingCycleInLinkedList {
     public static ListNode head;
     public static ListNode createCycleList() {
 
-        head = new ListNode(5);
-        ListNode second = new ListNode(4);
+        head = new ListNode(1);
+        ListNode second = new ListNode(2);
         ListNode third = new ListNode(3);
-        ListNode fourth = new ListNode(2);
+        ListNode fourth = new ListNode(3);
         ListNode fifth = new ListNode(1);
-        tail=fifth;
+//        tail=fifth;
 //        ListNode fifth=new ListNode(5);
 //        ListNode sixth=new ListNode(6);
 //        ListNode seventh=new ListNode(7);
@@ -48,7 +48,16 @@ public class DetectingCycleInLinkedList {
      }
      return false;
     }
-
+    //middle of linked list
+    public static ListNode middleNode(ListNode head) {
+        ListNode slow=head;
+        ListNode fast=head;
+        while(fast!=null && fast.next!=null){
+            slow=slow.next;
+            fast=fast.next.next;
+        }
+        return slow;
+    }
     public static void removingCycle(ListNode head){
         ListNode slow=head;
         ListNode fast=head;
@@ -160,6 +169,48 @@ public class DetectingCycleInLinkedList {
             newend.next=current;
             return head;
     }
+    public boolean isPalindrome(ListNode head){
+        ListNode mid=middleNode(head);
+        System.out.println(mid);
+        return true;
+    }
+    public static void reorderList(ListNode head) {
+        ListNode mid=middleNode(head);
+        ListNode slow=head;
+        
+    }
+    public static ListNode reverseLinkedList(ListNode head){
+       ListNode prev=null;
+       ListNode current=head;
+
+       while (current!=null){
+           ListNode next=current.next;
+           current.next=prev;
+           prev=current;
+           current=next;
+
+       }
+       return prev;
+    }
+
+
+    public static boolean palindromeLInkedList(ListNode head){
+        ListNode mid=middleNode(head);
+        ListNode headSecond=reverseLinkedList(mid);
+        ListNode firsthalf=head;
+        while(headSecond!=null)
+        {
+            if(firsthalf.val!=headSecond.val){
+                return false;
+            }
+            firsthalf=firsthalf.next;
+            headSecond=headSecond.next;
+        }
+        return  true;
+
+    }
+
+//    main method
     public static void main(String[] args) {
      ListNode head=createCycleList();
 //     boolean ans=detectCycle(head);
@@ -172,9 +223,15 @@ public class DetectingCycleInLinkedList {
 //        now calculate the startig point of the cycle
 //        startingPointCycle(head);
 //        reverseLinkedLIst(head);
+        displayLinkedList(head);
+//        reorderList(head);
 //        displayLinkedList(head);
-        ListNode l=reverseBetween(head,2,4);
-        System.out.println(l.val);
+//        ListNode l=reverseBetween(head,2,4);
+//        System.out.println(l.val);
+//        ListNode head1=reverseLinkedList(head);
+//        displayLinkedList(head1);
+        boolean res=palindromeLInkedList(head);
+        System.out.println(res);
     }
 
 }
