@@ -9,11 +9,11 @@ public class DetectingCycleInLinkedList {
     public static ListNode head;
     public static ListNode createCycleList() {
 
-        head = new ListNode(1);
-        ListNode second = new ListNode(2);
-        ListNode third = new ListNode(3);
-        ListNode fourth = new ListNode(3);
-        ListNode fifth = new ListNode(1);
+        head = new ListNode(0);
+        ListNode second = new ListNode(1);
+        ListNode third = new ListNode(2);
+//        ListNode fourth = new ListNode(3);
+//        ListNode fifth = new ListNode(1);
 //        tail=fifth;
 //        ListNode fifth=new ListNode(5);
 //        ListNode sixth=new ListNode(6);
@@ -23,9 +23,9 @@ public class DetectingCycleInLinkedList {
         // Creating the linked list: 1 -> 2 -> 3 -> 4
         head.next = second;
         second.next = third;
-        third.next = fourth;
-        fourth.next=fifth;
-        fifth.next=null;
+        third.next = null;
+//        fourth.next=fifth;
+//        fifth.next=null;
 //        fifth.next=sixth;
 //        sixth.next=seventh;
 //        seventh.next=eighth;
@@ -210,6 +210,28 @@ public class DetectingCycleInLinkedList {
 
     }
 
+    public static ListNode rotateRight(ListNode head,int k){
+        ListNode first=head;
+        ListNode secondLast=first;
+        while(first.next!=null){
+           secondLast=first;
+           first=first.next;
+
+        }
+        System.out.println(first.val);
+        System.out.println(secondLast.val);
+        ListNode start=head;
+        reverseLinkedList(head);
+        while (k!=0){
+            start.next=first;
+            first=first.next;
+            k--;
+        }
+        reverseLinkedList(start);
+        System.out.println(start.val);
+        return head;
+    }
+
 //    main method
     public static void main(String[] args) {
      ListNode head=createCycleList();
@@ -230,8 +252,9 @@ public class DetectingCycleInLinkedList {
 //        System.out.println(l.val);
 //        ListNode head1=reverseLinkedList(head);
 //        displayLinkedList(head1);
-        boolean res=palindromeLInkedList(head);
-        System.out.println(res);
+//        boolean res=palindromeLInkedList(head);
+//        System.out.println(res);
+        rotateRight(head,4);
     }
 
 }
